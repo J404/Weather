@@ -8,7 +8,7 @@ const CORS = require('cors');
 const app = Express();
 const PORT = process.env.PORT || 5000;
 
-app.use(CORS);
+app.use(CORS());
 app.use(Express.json());
 
 try {
