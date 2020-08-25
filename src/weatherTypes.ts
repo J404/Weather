@@ -9,6 +9,7 @@ export interface Weather {
     summary: string;
     icon: string;
     precipProbability: number;
+    precipType: string;
     temperature: number;
 }
 
