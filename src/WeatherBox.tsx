@@ -1,9 +1,16 @@
 import React from 'react';
 
-const WeatherBox: React.FC = () => {
+import * as WeatherTypes from './weatherTypes';
+
+interface Props {
+    dayName: string;
+    data: WeatherTypes.DayWeather;
+}
+
+const WeatherBox: React.FC<Props> = props => {
     return (
         <div className='WeatherBox inline-block m-8 mt-16 h-card bg-gray-700'>
-            <h4 className='text-3xl font-bold m-2'>Monday</h4>
+            <h4 className='text-3xl font-bold m-2'>{ props.dayName }</h4>
             <br></br>
             <svg width="115" height="115" viewBox="0 0 115 115" fill="none" className='mx-auto' xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M57.5 95C78.2107 95 95 78.2107 95 57.5C95 36.7893 78.2107 20 57.5 20C36.7893 20 20 36.7893 20 57.5C20 78.2107 36.7893 95 57.5 95ZM57.5 85C72.6878 85 85 72.6878 85 57.5C85 42.3122 72.6878 30 57.5 30C42.3122 30 30 42.3122 30 57.5C30 72.6878 42.3122 85 57.5 85Z" fill="black"/>
@@ -18,13 +25,9 @@ const WeatherBox: React.FC = () => {
             </svg>
             <br></br>
             <br></br>
-            <span>60F/20C</span>
+            <span>{ `${props.data.precipProbability} chance of ${props.data.precipType}` }</span>
             <br></br>
-            <span>Rainy</span>
-            <br></br>
-            <span>High of 2000F</span>
-            <br></br>
-            <span>Low of -3000C</span>
+            <span>{ `High of ${props.data.apparentTemperatureHigh}F, low of ${props.data.apparentTemperatureLow}F` }</span>
         </div>
     );
 }
