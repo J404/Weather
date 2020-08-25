@@ -6,6 +6,7 @@ module.exports = {
         fontFamily: {
             'header': ['Roboto'],
             'body': ['Roboto'],
+            'cursive': ['Dancing Script'],
         }
     }
 };

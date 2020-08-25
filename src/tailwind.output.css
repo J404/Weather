@@ -10068,6 +10068,10 @@ video {
   font-family: Roboto;
 }
 
+.font-cursive {
+  font-family: Dancing Script;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -27942,6 +27946,10 @@ video {
     font-family: Roboto;
   }
 
+  .sm\:font-cursive {
+    font-family: Dancing Script;
+  }
+
   .sm\:font-hairline {
     font-weight: 100;
   }
@@ -45784,6 +45792,10 @@ video {
 
   .md\:font-body {
     font-family: Roboto;
+  }
+
+  .md\:font-cursive {
+    font-family: Dancing Script;
   }
 
   .md\:font-hairline {
@@ -63630,6 +63642,10 @@ video {
     font-family: Roboto;
   }
 
+  .lg\:font-cursive {
+    font-family: Dancing Script;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -81472,6 +81488,10 @@ video {
 
   .xl\:font-body {
     font-family: Roboto;
+  }
+
+  .xl\:font-cursive {
+    font-family: Dancing Script;
   }
 
   .xl\:font-hairline {
