@@ -14,7 +14,7 @@ const DailyWeather: React.FC<Props | undefined> = props => {
         { (props.dailyWeather && props.dailyWeather.summary && props.dailyWeather.data) ? (
             <div>
                 <p>{props.dailyWeather.summary}</p>
-                <div className='grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-5'>
+                <div className='grid xsm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5'>
                     <WeatherBox dayName='Monday' data={props.dailyWeather.data[1]}/>
                     <WeatherBox dayName='Tuesday' data={props.dailyWeather.data[2]}/>
                     <WeatherBox dayName='Wednesday' data={props.dailyWeather.data[3]}/>
