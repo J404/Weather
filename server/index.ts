@@ -22,7 +22,7 @@ app.get('/weather', async (req: Express.Request, res: Express.Response) => {
 
     // For now, lat & lon are hardcoded
     // TODO: send lat/lon through route params
-    const apiRes: Promise<Response> = await fetch(`https://api.darksky.net/forecast/${key}/41.505550,41.505550`, {});
+    const apiRes: Promise<Response> = await fetch(`https://api.darksky.net/forecast/${key}/41.499321,-81.694359`, {});
     const { currently, hourly, daily } = await (await apiRes).json();
 
     res.json({ data: { currently, hourly, daily }});
