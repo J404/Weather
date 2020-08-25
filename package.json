@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:css": "postcss -w src/tailwind.ss -o src/tailwind.output.css",
+    "start:css": "postcss -w src/tailwind.css -o src/tailwind.output.css",
     "build": "react-scripts build",
     "build:css": "postcss src/tailwind.css -o src/tailwind.output.css",
     "test": "react-scripts test",
