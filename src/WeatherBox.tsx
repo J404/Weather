@@ -11,7 +11,7 @@ interface Props {
 
 const WeatherBox: React.FC<Props> = props => {
     return (
-        <div className='WeatherBox inline-block rounded m-8 mt-16 h-card bg-gray-700'>
+        <div className='WeatherBox inline-block rounded m-8 mt-16 min-h-card h-auto pb-4 bg-gray-700'>
             <h4 className='text-3xl mx-auto text-center font-bold'>{ props.dayName }</h4>
             <div className='mx-auto w-48 h-0 m-2 border-2 border-white rounded-lg'></div>
             <p>{props.data.summary}</p>
