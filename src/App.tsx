@@ -5,6 +5,7 @@ import * as WeatherTypes from './weatherTypes';
 
 import Subtitle from './Subtitle';
 import DailyWeather from './DailyWeather';
+import Dashboard from './Dashboard'
 
 function App() {
   const [weatherData, updateWeather] = useState<WeatherTypes.WeatherData>({} as WeatherTypes.WeatherData);
@@ -24,7 +25,14 @@ function App() {
     <div className="App text-white bg-gray-900 w-screen min-h-screen">
       <h2 className="text-6xl font-header text-left ml-12">Weather</h2>
       <Subtitle message='Proudly the bottom 10%'/>
-      <DailyWeather dailyWeather={weatherData.daily}/>
+      {(weatherData.daily && weatherData.currently && weatherData.hourly) ? (
+        <div id='main'>
+          <Dashboard/>
+          <DailyWeather dailyWeather={weatherData.daily}/>
+        </div>
+        ) : (
+          <p>Loading...</p>
+      )}
     </div>
   );
 }
