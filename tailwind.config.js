@@ -9,7 +9,7 @@ module.exports = {
             'cursive': ['Dancing Script'],
         },
         height: {
-            'card': '60vh',
+            'card': '40vh',
             '16':	'4rem',
             '20':	'5rem',
             '24':	'6rem',

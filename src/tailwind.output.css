@@ -10213,7 +10213,7 @@ video {
 }
 
 .h-card {
-  height: 60vh;
+  height: 40vh;
 }
 
 .h-auto {
@@ -28055,7 +28055,7 @@ video {
   }
 
   .sm\:h-card {
-    height: 60vh;
+    height: 40vh;
   }
 
   .sm\:h-auto {
@@ -45867,7 +45867,7 @@ video {
   }
 
   .md\:h-card {
-    height: 60vh;
+    height: 40vh;
   }
 
   .md\:h-auto {
@@ -63679,7 +63679,7 @@ video {
   }
 
   .lg\:h-card {
-    height: 60vh;
+    height: 40vh;
   }
 
   .lg\:h-auto {
@@ -81491,7 +81491,7 @@ video {
   }
 
   .xl\:h-card {
-    height: 60vh;
+    height: 40vh;
   }
 
   .xl\:h-auto {
