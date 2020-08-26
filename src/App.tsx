@@ -22,8 +22,8 @@ function App() {
 
   return (
     <div className="App text-white bg-gray-900 w-screen min-h-screen">
-      <h2 className="text-6xl font-header">Weather</h2>
-      <Subtitle message='Example subtitle'/>
+      <h2 className="text-6xl font-header text-left ml-12">Weather</h2>
+      <Subtitle message='Proudly the bottom 10%'/>
       <DailyWeather dailyWeather={weatherData.daily}/>
     </div>
   );

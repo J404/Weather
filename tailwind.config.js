@@ -4,9 +4,9 @@ module.exports = {
     },
     theme: {
         fontFamily: {
-            'header': ['Roboto'],
+            'header': ['Pacifico'],
             'body': ['Roboto'],
-            'cursive': ['Dancing Script'],
+            'cursive': ['Pacifico'],
         },
         height: {
             'card': '40vh',

@@ -27,7 +27,6 @@ const DailyWeather: React.FC<Props | undefined> = props => {
         <div className='DailyWeather'>
         { (props.dailyWeather && props.dailyWeather.summary && props.dailyWeather.data) ? (
             <div>
-                <p>{props.dailyWeather.summary}</p>
                 <div className='grid xsm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5'>
                     {
                         days.map((dayName, i) => <WeatherBox dayName={dayName} data={props.dailyWeather.data[i + 1]}/>)
