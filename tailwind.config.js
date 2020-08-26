@@ -11,6 +11,8 @@ module.exports = {
             },
             height: {
                 'card': '40vh',
+                'card-md': '62vh',
+                'card-lg': '110vh',
             },
             minHeight: {
                 'card': '40vh',
