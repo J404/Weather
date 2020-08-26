@@ -27,7 +27,7 @@ function App() {
       <Subtitle message='Proudly the bottom 10%'/>
       {(weatherData.daily && weatherData.currently && weatherData.hourly) ? (
         <div id='main'>
-          <Dashboard/>
+          <Dashboard currently={weatherData.currently} hourly={weatherData.hourly}/>
           <DailyWeather dailyWeather={weatherData.daily}/>
         </div>
         ) : (
