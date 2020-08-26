@@ -2,14 +2,19 @@ import React from 'react';
 
 interface Props {
     icon: string;
+    height?: number;
+    width?: number;
 }
 
 const WeatherIcon: React.FC<Props> = props => {
     let icon: JSX.Element;
+    let width: number, height: number;
 
     switch(props.icon) {
         case 'rain':
-            icon = <svg width="115" height="103" className='mx-auto' viewBox="0 0 115 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+            width = (props.width) ? props.width : 115;
+            height = (props.height) ? props.height : 103;
+            icon = <svg width={width} height={height} className='mx-auto' viewBox="0 0 115 103" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M69.0343 16.6661C73.1762 22.833 75.3868 30.1841 75.3868 37.5C75.3868 44.8159 73.8791 46.5 73.8791 46.5L63.3248 43.875C63.98 41.5279 64.3301 39.0545 64.3301 36.4998C64.3301 21.312 51.9545 8.99984 36.6883 8.99984C21.4221 8.99984 9.04647 21.312 9.04647 36.4998C9.04647 51.6877 21.4221 63.9998 36.6883 63.9998C37.0248 63.9998 37.3599 63.9938 37.6934 63.982V75C30.2384 75 22.9507 72.8006 16.7521 68.6801C10.5534 64.5595 5.72218 58.7028 2.86926 51.8506C0.016332 44.9984 -0.730123 37.4584 0.724285 30.1841C2.17869 22.9098 5.76864 16.228 11.0402 10.9835C16.3117 5.73904 23.028 2.16751 30.3398 0.720569C37.6516 -0.726377 45.2305 0.0162482 52.1181 2.85453C59.0056 5.69282 64.8925 10.4993 69.0343 16.6661Z" fill="white"/>
             <path fillRule="evenodd" clipRule="evenodd" d="M103.045 72.3432C99.765 74.0875 96.1032 75 92.384 75V63.9934C99.1324 63.7771 104.536 58.2664 104.536 51.5C104.536 44.5965 98.9111 39 91.9719 39C86.304 39 81.5126 42.7338 79.9473 47.864L72.3714 46L74.3817 37.5C77.0116 34.8836 82.2598 32.043 85.8189 30.9689C89.3779 29.8948 93.1484 29.7105 96.7961 30.4323C100.444 31.1542 103.856 32.7599 106.731 35.1073C109.606 37.4546 111.855 40.4711 113.278 43.8896C114.702 47.3081 115.256 51.0231 114.891 54.7054C114.527 58.3877 113.255 61.9238 111.189 65.0003C109.122 68.0769 106.325 70.599 103.045 72.3432Z" fill="white"/>
             <rect x="37.1908" y="64" width="56.2888" height="11" fill="white"/>
@@ -20,7 +25,9 @@ const WeatherIcon: React.FC<Props> = props => {
             </svg>;            
         break;
         case 'partly-cloudy-day':
-            icon = <svg width="120" height="103" className='mx-auto' viewBox="0 0 120 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+            width = (props.width) ? props.width : 120;
+            height = (props.height) ? props.height : 103;
+            icon = <svg width={width} height={height} className='mx-auto' viewBox="0 0 120 103" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="55" width="5" height="15" fill="white"/>
             <rect y="58" width="5" height="15" transform="rotate(-90 0 58)" fill="white"/>
             <rect x="91.5355" y="30.1421" width="5" height="15" transform="rotate(-135 91.5355 30.1421)" fill="white"/>
@@ -33,14 +40,18 @@ const WeatherIcon: React.FC<Props> = props => {
             </svg>;            
         break;
         case 'cloudy':
-            icon = <svg width="115" height="75" className='mx-auto' viewBox="0 0 115 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+            width = (props.width) ? props.width : 115;
+            height = (props.height) ? props.height : 75;
+            icon = <svg width={width} height={height} className='mx-auto' viewBox="0 0 115 75" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M69.0343 16.6661C73.1762 22.833 75.3868 30.1841 75.3868 37.5C75.3868 44.8159 73.8791 46.5 73.8791 46.5L63.3248 43.875C63.98 41.5279 64.3301 39.0545 64.3301 36.4998C64.3301 21.312 51.9545 8.99984 36.6883 8.99984C21.4221 8.99984 9.04647 21.312 9.04647 36.4998C9.04647 51.6877 21.4221 63.9998 36.6883 63.9998C37.0248 63.9998 37.3599 63.9938 37.6934 63.982V75C30.2384 75 22.9507 72.8006 16.7521 68.6801C10.5534 64.5595 5.72218 58.7028 2.86926 51.8506C0.016332 44.9984 -0.730123 37.4584 0.724285 30.1841C2.17869 22.9098 5.76864 16.228 11.0402 10.9835C16.3117 5.73904 23.028 2.16751 30.3398 0.720569C37.6516 -0.726377 45.2305 0.0162482 52.1181 2.85453C59.0056 5.69282 64.8925 10.4993 69.0343 16.6661Z" fill="white"/>
             <path fillRule="evenodd" clipRule="evenodd" d="M103.045 72.3432C99.765 74.0875 96.1032 75 92.384 75V63.9934C99.1324 63.7771 104.536 58.2664 104.536 51.5C104.536 44.5965 98.9111 39 91.9719 39C86.304 39 81.5126 42.7339 79.9473 47.864L72.3714 46L74.3817 37.5C77.0116 34.8836 82.2598 32.043 85.8189 30.9689C89.3779 29.8948 93.1484 29.7105 96.7961 30.4324C100.444 31.1542 103.856 32.7599 106.731 35.1073C109.606 37.4546 111.855 40.4712 113.278 43.8896C114.702 47.3081 115.256 51.0231 114.891 54.7054C114.527 58.3877 113.255 61.9238 111.189 65.0003C109.122 68.0769 106.325 70.599 103.045 72.3432Z" fill="white"/>
             <rect x="37.1908" y="64" width="56.2888" height="11" fill="white"/>
             </svg>;            
         break;
         default:
-            icon = <svg width="115" height="115" className='mx-auto' viewBox="0 0 115 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+            width = (props.width) ? props.width : 115;
+            height = (props.height) ? props.height : 115;
+            icon = <svg width={width} height={height} className='mx-auto' viewBox="0 0 115 115" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" clipRule="evenodd" d="M57.5 95C78.2107 95 95 78.2107 95 57.5C95 36.7893 78.2107 20 57.5 20C36.7893 20 20 36.7893 20 57.5C20 78.2107 36.7893 95 57.5 95ZM57.5 85C72.6878 85 85 72.6878 85 57.5C85 42.3122 72.6878 30 57.5 30C42.3122 30 30 42.3122 30 57.5C30 72.6878 42.3122 85 57.5 85Z" fill="white"/>
             <rect x="55" width="5" height="15" fill="white"/>
             <rect x="55" y="100" width="5" height="15" fill="white"/>
