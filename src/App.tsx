@@ -6,6 +6,7 @@ import * as WeatherTypes from './weatherTypes';
 import Subtitle from './Subtitle';
 import DailyWeather from './DailyWeather';
 import Dashboard from './Dashboard'
+import WeatherIcon from './WeatherIcon';
 
 function App() {
   const [weatherData, updateWeather] = useState<WeatherTypes.WeatherData>({} as WeatherTypes.WeatherData);
@@ -30,10 +31,15 @@ function App() {
       {!loading ? (
         <div id='main'>
           <Dashboard currently={weatherData.currently} hourly={weatherData.hourly}/>
-          <DailyWeather dailyWeather={weatherData.daily}/>
+          <div className='mt-8'>
+            <Subtitle message='The rest of your week' />
+            <DailyWeather dailyWeather={weatherData.daily}/>
+          </div>
         </div>
         ) : (
-          <p>Loading...</p>
+          <div className='animate-spin-slow mx-auto my-auto w-1/4'>
+            <WeatherIcon icon='clear' height={50} width={50} />
+          </div>
       )}
     </div>
   );
