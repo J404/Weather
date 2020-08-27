@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(CORS());
 app.use(Express.json());
-app.use('/', Express.static(path.join(__dirname, '../build')));
+app.use(Express.static(path.join(__dirname, '../build')));
 
 
 app.get('/weather', async (req: Express.Request, res: Express.Response) => {
