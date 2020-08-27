@@ -22,7 +22,7 @@ const HourlyWeather: React.FC<WeatherTypes.HourlyWeatherList> = props => {
         <div className='HourlyWeather grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5'>
             {
                 hourlySections.map((hourWeather, i) => <div key={i}>
-                    <WeatherIcon icon={hourWeather.icon} height={72} width={61.8}/>
+                    <WeatherIcon icon={hourWeather.icon} height={72}/>
                     <p>{getTimeFromIndex(i)}</p>
                     <p>{`${Math.floor(hourWeather.temperature)}F`}</p>
                     {(hourWeather.precipType) ? 
