@@ -1,6 +1,7 @@
 import * as Express from 'express';
 import * as fetch from 'node-fetch';
 import * as dotenv from 'dotenv';
+import * as path from 'path';
 dotenv.config();
 
 const CORS = require('cors');
@@ -10,12 +11,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use(CORS());
 app.use(Express.json());
+app.use('/', Express.static(path.join(__dirname, '../build')));
 
-try {
-    app.use(Express.static('../build'));
-} catch(err) {
-    console.log('Build folder not yet created');
-}
 
 app.get('/weather', async (req: Express.Request, res: Express.Response) => {
     const key = process.env.API_KEY;
