@@ -13,7 +13,6 @@ app.use(CORS());
 app.use(Express.json());
 app.use(Express.static(path.join(__dirname, '../build')));
 
-
 app.get('/weather', async (req: Express.Request, res: Express.Response) => {
     const key = process.env.API_KEY;
 
